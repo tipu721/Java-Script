@@ -8,8 +8,37 @@
 </head>
 
 <body>
-    <h1> Hello World !</h1>
-    <script src=".\hello.js"></script>
+    <h2>What Can JavaScript Do?</h2>
+
+
+    <!-- js can change html contents -->
+    <p id="101">JavaScript can change HTML content.</p>
+    <button onclick='document.getElementById("101").innerHTML = "Hello Java Script !"'>Click Me !</button>
+
+
+    <!-- JavaScript Can Hide HTML Elements -->
+    <button onclick='document.getElementById("101").style.display ="none"'>Hide Me !</button>
+
+
+    <!-- JavaScript Can Show HTML Elements -->
+    <p id='102' style="display: none;">Hello Java Script</p>
+    <button onclick='document.getElementById("102").style.display ="block"'>Show Hidden!</button>
+
+    <br> </br>
+
+    <!-- JavaScript Can Change HTML Attribute Values -->
+    <img id="myImage" src="resources\resized.jpg" style="width:100px">
+    <button onclick="document.getElementById('myImage').src='resources/colored.jpg'">Change Img</button>
+
+
+    <!-- JavaScript Can Change HTML Styles (CSS) -->
+    <button onclick="document.getElementById('myImage').style.width='500px'">Change width</button>
+
+
+
+
+
+
 </body>
 
 </html>
