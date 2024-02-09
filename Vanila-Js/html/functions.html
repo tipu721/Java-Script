@@ -10,10 +10,10 @@
 <body>
     <p id="resultId">Result will show here</p>
     <button onclick="document.getElementById('resultId').innerHTML='Tipsu Sultan'">show result1</button>
-    <button onclick="document.getElementById('resultId').innerHTML=myFunction(1, 100)">show result2</button>
+    <button onclick="document.getElementById('resultId').innerHTML=demo(1, 100)">show result2</button>
     <script>
 
-        function myFunction(p1, p2) {
+        let demo = function myFunction(p1, p2) {
             const list = [];
             for (let i = p1; i <= p2; i++) {
                 list[i] = i;
@@ -22,6 +22,8 @@
             }
             return list;
             // console.log(list);
+
+            demo();
 
         }
     </script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Arrow Function Page</h1>
+    <h2 id="output">Arrow Function Output</h2>
+
+    <script>
+        const demo = function (a, b) {
+
+            return a * b;
+
+        }
+        const tipu = demo;
+        console.log("tipu")
+        console.log(tipu(5, 8));
+        console.log("demo");
+        console.log(demo(5, 5));
+
+
+
+        console.log("Arrow Function");
+        const arrow = (a) => {
+            return "Hello Arrow Funtion" + a;
+        }
+
+        let r = arrow(56);
+        console.log(r);
+
+    </script>
+</body>
+
+</html>
