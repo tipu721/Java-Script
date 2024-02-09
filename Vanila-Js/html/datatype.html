@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let name = "Tipu";
+        let age = 26;
+        let ageSring = "2600";
+        // age = ageSring
+        document.write(age);
+        document.write(name + "\n" + age + "   ");
+        document.write(age == ageSring); //compare only value
+        document.write();
+        document.write(+ age === ageSring); //compare value and datatype
+
+
+        document.write("         ");
+
+
+        // declear a variable
+        let carName;
+        document.write(carName + "      ");  //undefined
+        carName = "Volvo"
+        document.writeln(carName);
+
+
+        //re declear with var 
+
+        var demo = "Tipu";
+
+
+        var demo; //can re declear and not lose value
+
+        document.writeln(demo);
+
+
+        // let and const have block scope.
+
+        //     let and const can not be redeclared.
+
+        //         let and const must be declared before use.
+
+        //             let and const does not bind to this.
+
+        // let and const are not hoisted.
+
+
+
+        //    var does not have to be declared.
+
+        // var is hoisted.
+
+        // var binds to this.
+
+
+
+
+        document.write(demoVar + "...........");
+        demoVar = "Have Value";
+        document.write(demoVar);
+
+        var demoVar;
+
+
+
+
+        //data types
+
+        // Numbers:
+        let length = 16;
+        let weight = 7.5;
+        console.log("Weight info")
+        console.log(typeof (weight));
+        console.log(weight);
+
+
+        // Strings:
+        let color = "Yellow";
+        let lastName = "Johnson";
+        console.log(typeof (lastName));
+        console.log(lastName);
+
+        // Booleans
+        let x = true;
+        let y = false;
+
+        // Object:
+        const person = { firstName: "John", lastName: "Doe" };
+
+        console.log("type of person");
+        console.log(person);
+        console.log(typeof (person));
+
+        // Array object:
+        const cars = ["Saab", "Volvo", "BMW"];
+
+
+        console.log("type of cars");
+        console.log(typeof (cars));
+
+
+
+        // Date object:
+        const date = new Date("2022-03-25");
+
+
+        console.log("type of date");
+        console.log(typeof (date));
+
+
+
+    </script>
+</body>
+
+</html>
