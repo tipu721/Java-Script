@@ -8,18 +8,22 @@
 </head>
 
 <body>
-    <p id="result">Result will show here</p>
-    <button onclick="document.getElementById('result').innerHTML=result">show result1</button>
-    <button onclick="document.getElementById('result').innerHTML=myFunction(5, 13)">show result2</button>
+    <p id="resultId">Result will show here</p>
+    <button onclick="document.getElementById('resultId').innerHTML='Tipsu Sultan'">show result1</button>
+    <button onclick="document.getElementById('resultId').innerHTML=myFunction(1, 100)">show result2</button>
     <script>
 
         function myFunction(p1, p2) {
-            return p1 * p2;
+            const list = [];
+            for (let i = p1; i <= p2; i++) {
+                list[i] = i;
+                console.log(i);
+                //  console.log(list);
+            }
+            return list;
+            // console.log(list);
+
         }
-
-        const result = myFunction(5, 25);
-
-        console.log(result);
     </script>
 
 
