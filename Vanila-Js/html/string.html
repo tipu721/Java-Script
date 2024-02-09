@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <textarea id="text" label="Write Here">Text show here</textarea>
+
+    <script>
+        let x = "Jhon";
+        //object
+        let y = new String("Jhon");
+
+        console.log("X type");
+        console.log(typeof (x));
+
+
+        console.log("Y type");
+        console.log(typeof (x));
+
+
+        console.log(x == y);//true
+        console.log(x === y); // alaways false
+
+
+        //string template
+        let text = `The"quick
+                    brown fox
+                    jumps" over
+                    the lazy dog`;
+
+        console.log(text);
+        document.getElementById('text').innerHTML = text;
+
+        let firstName = "Tipu";
+        let lastName = "Sultan";
+        let welcome = `Welcome ${firstName}, ${lastName}!`;
+
+        document.getElementById('text').innerHTML = welcome;
+
+    </script>
+
+</body>
+
+</html>
