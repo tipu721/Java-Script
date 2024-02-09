@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="result">Result will show here</p>
+    <button onclick="document.getElementById('result').innerHTML=result">show result1</button>
+    <button onclick="document.getElementById('result').innerHTML=myFunction(5, 13)">show result2</button>
+    <script>
+
+        function myFunction(p1, p2) {
+            return p1 * p2;
+        }
+
+        const result = myFunction(5, 25);
+
+        console.log(result);
+    </script>
+
+
+</body>
+
+</html>
