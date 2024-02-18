@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output">Call Back Output Here</p>
+
+
+
+
+    <script>
+        function func1(res){
+            document.getElementById("output").innerHTML=res;
+        }
+
+
+        function func2(a){
+            let res = a + 5;
+            func1(res);
+        }
+
+        func2(10);
+
+
+
+
+        //call back function = pas a function as parameter but after call passing function could be called or not 
+        function disPlayResult(num1){
+
+            document.getElementById("output").innerHTML=num1;
+
+        }
+        function calCulator(num1 , num2, callback){
+
+            callback(25);
+            let res = num1 + num2;
+            
+
+        }
+        calCulator(5, 6, disPlayResult);
+
+       
+        
+
+    </script>
+</body>
+
+
+</html>
