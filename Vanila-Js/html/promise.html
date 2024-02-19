@@ -24,14 +24,134 @@
 
         myPromise.then(
             function(value){
-                console.log(value)
                 document.getElementById("output").innerHTML=value;
             },
             function(error){
-                console.log(error);
                 document.getElementById("output").innerHTML=error;
             }
         )
+
+
+
+        //promise example
+        let p = new Promise(function(myResolve, myReject){
+            let x = 2;
+            if(x === 1){
+                myResolve("Success");
+            }
+            else{
+                myReject("Rejected");
+            }
+        });
+
+        p.then(
+            function(value){
+                console.log(value);
+            },
+
+            function(error){
+                console.log(error);
+            }
+        )
+       
+
+        //asyncronous with call back
+        setTimeout(function(){
+            myFunction("I Love to keep promise");
+        }, 3000);
+
+        function myFunction(value){
+            console.log("myFunction Output");
+            console.log(value);
+        }
+
+        //asyncronous with promise
+        let p2 = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                let x = 5;
+                if(x == 3){
+                    resolve("Promised Resolved");
+                }
+                else{
+                    reject("Promise Rejected");
+                }
+               
+            }, 5000)
+        })
+
+        p2.then(
+        (value)=>{
+            console.log("Resolved Value");
+            console.log(value);
+        },
+        (error)=>{
+            console.log("Rejected Value");
+            console.log(error);
+        })
+
+
+
+        //Example to Open to file with callback
+        function getFile(myCallback){
+
+            let req = new XMLHttpRequest();
+            req.open("GET", "string.html");
+
+            
+
+            req.send();
+
+            req.onload = function(){
+                if(req.status == 200){
+                    myCallback(req.responseText);
+                }
+
+                else{
+                    myCallback("Error: "+ req.status);
+                }
+               
+            }
+
+        }
+
+        let res = getFile((value)=>{
+            console.log("Get File Method output");
+            console.log(value);
+        })
+
+
+        //XMLReques with promise
+        let p3 = new Promise( (resolve, reject)=>{
+
+            let req = new XMLHttpRequest();
+            let temp = req.open("GET", "string.html");
+            console.log("Temp Output");
+            console.log(temp)
+            req.onload = function(){
+
+                if(req.response == 200){
+                    resolve("Success");
+                }
+                else{
+                    reject(req.status);
+                }
+            }
+
+            req.send();
+
+        })
+
+        p3.then(
+            (value)=>{
+                console.log("Promise success output for request");
+                console.log(value);
+            },
+            (error)=>{
+                console.log("Promise error output for request");
+                console.log(error);
+            }
+        )
+        
     </script>
 </body>
 </html>
