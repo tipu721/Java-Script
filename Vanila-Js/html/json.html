@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1> JSON Page</h1>
+    <h2 id="output">Json Output</h2>
+    <h2 id="textout">Json Text Output</h2>
+
+    <script>
+        let obj = {
+            "employee": [
+                { "firstName": "John", "lastName": "Doe" },
+                { "firstName": "Anna", "lastName": "Smith" },
+                { "firstName": "Peter", "lastName": "Jones" }
+            ]
+        }
+
+        let text = '{"employees":[' +
+            '{"firstName":"John","lastName":"Doe" },' +
+            '{"firstName":"Anna","lastName":"Smith" },' +
+            '{"firstName":"Peter","lastName":"Jones" }]}';
+
+        console.log("Output");
+        document.getElementById('output').innerHTML = obj.employee[0].firstName;
+        const obj1 = JSON.parse(text);
+        let lastName = document.getElementById('textout').innerHTML = obj1.employees[0].lastName;
+        console.log(lastName);
+    </script>
+</body>
+
+</html>
