@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Aysc/Awit Practice</h2>
+
+
+
+    <script>
+        async function myFunction(){
+        return "My Function Called";
+    }
+
+
+    myFunction().then((value)=>{
+        console.log("Async success")
+        console.log(value);
+    },
+    (error)=>{
+        console.log("Async Error");
+        console.log(error);
+    }
+    )
+
+    let output = myFunction();
+    console.log(output);
+
+    </script>
+
+    <h4 id="asw">Output Show Here</h4>
+    <script>
+      async function myDisplay(){
+            let p1 = new Promise((resolve, reject)=>{
+
+                setTimeout(function(){
+                    resolve("Promise Resolved");
+                }, 3000)
+               
+
+            });
+           document.getElementById("asw").innerHTML = await p1;
+        }
+
+        myDisplay();
+
+
+
+
+        //asyc await waiting for a file
+        async function getFile(){
+            let p1 = new Promise(function(resolve){
+
+                let req = new XMLHttpRequest();
+             req.open("GET", "loop.html");
+             req.onload = function(){
+                if(req.status == 200){
+
+                    resolve(req.response);
+                }
+                else{
+                    resolve("File not Found");
+                }
+             }
+
+             req.send();
+                
+            })
+
+            document.getElementById("asw").innerHTML = await p1;
+            
+        }
+
+        getFile();
+      
+    </script>
+
+    
+</body>
+</html>
