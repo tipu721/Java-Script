@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Js Promise Practice</h1>
+
+    <h4 id="output">Promise Output</h4>
+
+
+    <script>
+
+
+        let p = new Promise((resolve, reject) => {
+
+            setTimeout(() => {
+                document.getElementById("output").innerHTML = "I Kept promise";
+            }, 500);
+        });
+
+        console.log(p);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="asyncout">Asyncronous Funtion Output</p>
+    <p id="time">Time Output</p>
+
+
+
+    <script>
+        //asyncronous function
+
+        ////can given inside the function
+        setTimeout(function callback(){ 
+            document.getElementById("asyncout").innerHTML="I Love Ayncronous Java Script";
+        }, 3000);
+
+
+        //callback function defination given outside 
+        setTimeout(callback, 4000);
+        function callback(){ 
+            document.getElementById("asyncout").innerHTML="Callback function  outside the function";
+        }
+
+
+
+        setInterval(function (){
+
+            let d = new Date;
+            document.getElementById("time").innerHTML=
+            d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+
+        }, 1000)
+    </script>
+</body>
+</html>

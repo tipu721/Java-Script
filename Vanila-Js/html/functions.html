@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="resultId">Result will show here</p>
+    <button onclick="document.getElementById('resultId').innerHTML='Tipsu Sultan'">show result1</button>
+    <button onclick="document.getElementById('resultId').innerHTML=demo(1, 100)">show result2</button>
+    <script>
+
+        let demo = function myFunction(p1, p2) {
+            const list = [];
+            for (let i = p1; i <= p2; i++) {
+                list[i] = i;
+                console.log(i);
+                //  console.log(list);
+            }
+            return list;
+            // console.log(list);
+
+            demo();
+
+        }
+    </script>
+
+
+</body>
+
+</html>

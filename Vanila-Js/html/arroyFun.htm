@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Arrow Function Page</h1>
+    <h2 id="output">Arrow Function Output</h2>
+    <button onclick="arrow(25)">Show Arrow Output</button>
+    <button onclick="demo(2,3)">show Demo Outpu</button>
+
+    <script>
+
+        //normal function
+        const demo = function (a, b) {
+
+            return document.getElementById("output").innerHTML = "non arrow return" + this + " " + a * b;
+        }
+        const tipu = demo;
+        console.log("tipu")
+        console.log(tipu(5, 8));
+        console.log("demo");
+        console.log(demo(5, 5));
+
+        console.log("Arrow Function");
+        const arrow = a => {
+            document.getElementById("output").innerHTML = "This arrow return " + this + " " + a;
+        }
+        let r = arrow(56);
+        console.log(r);
+
+    </script>
+</body>
+
+</html>
